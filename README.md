@@ -4,17 +4,20 @@ An auto report bash script to test all RTW88 supported devices.
 
 Test report includes:
 
-1) Kernel Version
-2) CPU Info
-3) System Info
-4) USB Tree
-5) USB Device Info
-6) SDIO Tree
-7) SDIO Info
-8) WIFI supported channels and internal Info
-9) Network Speed Test
-10) DNS Ping Test
-11) Self Ping Test
-12) IPERF3 DUT <-> Router <-> HOST Test
-13) IPERF3 DUT <-> HOST Test
+1) Kernel Version - AUTO
+2) CPU Info - AUTO
+3) System Info - AUTO
+4) USB Tree - AUTO
+5) USB Device Info - AUTO
+6) SDIO Tree - AUTO
+7) SDIO Info - AUTO
+8) WIFI supported channels and internal Info - AUTO
+9) WIFI connect - Manual
+10) Network Speed Test - AUTO
+11) DNS Ping Test - AUTO
+12) Self Ping Test - AUTO
+13) IPERF3 DUT <-> Router <-> HOST Test - Manual
+14) Enter Software-AP - AUTO
+15) IPERF3 DUT <-> HOST Test - Manual
+16) Clean report - Manual
 
