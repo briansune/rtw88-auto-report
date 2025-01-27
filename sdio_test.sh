@@ -21,19 +21,19 @@ else
 	echo "2+5G Test"
 fi
 
-echo What USB device is testing?
+echo What SDIO device is testing?
 
 read v1
 
-echo \# ${v1^^} USB Dongle Testing
+echo \# ${v1^^} SDIO PCBA Testing
 
 cat << EOF
 
-### Test USB Gear
+### Test SDIO Gear
 
-|Test Board|USB Dongle HW|
+|Test Board|SDIO Dongle HW|
 |-|-|
-|<img src="" height="400"/>|<img src="" height="400"/>|
+|<img src="../images/" height="400"/>|<img src="../images/" height="400"/>|
 
 \`\`\`
 EOF
@@ -47,18 +47,12 @@ lscpu
 cat << EOF
 \`\`\`
 
-### USB Tree
+### SDIO Tree
 
 \`\`\`
-Before driver is inserted.
 EOF
 
-lsusb -t
-
-cat << EOF
-
-After driver is inserted.
-EOF
+./check.sh
 
 cd ./ko
 NAME=${v1:3}
@@ -70,25 +64,12 @@ if [ -f $FILE ]; then
    	exit 0
 fi
 cd ..
-lsusb -t
 
 cat << EOF
-\`\`\`
-
-<details>
-
-<summary>USB Details</summary>
-
 \`\`\`
 EOF
-lsusb
-read u1
-lsusb -v -s 001:00${u1}
 
 cat << EOF
-\`\`\`
-
-</details>
 
 ### Driver Load
 
@@ -154,7 +135,7 @@ cat << EOF
 \`\`\`
 EOF
 
-speedtest-cli 
+speedtest-cli --secure
 
 cat << EOF
 \`\`\`
@@ -199,13 +180,13 @@ dmesg | grep rtw
 cat << EOF
 \`\`\`
 
-</details>
-
 EOF
 
 done
 
 cat << EOF
+</details>
+
 ### AP Test
 
 #### hostapd.conf
