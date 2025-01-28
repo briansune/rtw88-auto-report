@@ -8,7 +8,7 @@ Test report includes:
 2) CPU Info - AUTO
 3) System Info - AUTO
 4) USB Tree - AUTO
-5) USB Device Info - AUTO
+5) USB Device Info - Semi-AUTO (User Enter Device #)
 6) SDIO Tree - AUTO
 7) SDIO Info - AUTO
 8) WIFI supported channels and internal Info - AUTO
